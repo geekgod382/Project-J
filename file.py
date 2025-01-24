@@ -15,7 +15,7 @@ class fileop:
         return None
 
     def open_file(self,filename):
-        search_path = "C:\\"
+        search_path = "C:\\"        # Write path of your root directory
         file_path = self.find_file(filename, search_path)
 
         if file_path:

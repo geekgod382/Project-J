@@ -88,11 +88,6 @@ def main():
         elif x=="what is the date":
             speak(time.strftime("It's %A, %d %B %Y", time.localtime()))
 
-        elif "activate barn door protocol" in x or "activate protocol" in x:
-            print("Barn door protocol activated")
-            speak("Barn door protocol activated")
-            print("Activation code: ", random.randint(100000, 999999))
-
         elif "set an alarm" in x:
             speak("For what time?")
             alarm_time = input("(HH:MM, in 24 hour format) ")

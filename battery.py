@@ -28,5 +28,5 @@ class battery_reminder():
             if battery_percent >= high_battery_threshold:
                 speak(f"sir, the device battery is at {battery_percent}%. Please unplug your device.")
             
-            time.sleep(100)  # Check every minute
+            time.sleep(100)  # Check every 100 seconds
 

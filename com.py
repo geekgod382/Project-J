@@ -45,4 +45,4 @@ def speak(text):
     try:
         engine.runAndWait()
     except RuntimeError:
-        pass
+        print("Runtime error occurred")

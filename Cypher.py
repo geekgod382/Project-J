@@ -157,15 +157,6 @@ def main():
             pyautogui.press('enter')
             speak("Message sent")
 
-        elif "summarize text for me" in x or "summarize text" in x:
-            print("Enter the text to summarize: ")
-            speak("Enter the text to summarize: ")
-            text = str(input())
-            response = chat.send_message("Summarize this text: " + text)
-            cleaned_data = re.sub(r'\* ', '', response.text)
-            print(cleaned_data)
-            speak(cleaned_data)
-
         else:
             r = tr.process_input(x)
             response = chat.send_message(r)

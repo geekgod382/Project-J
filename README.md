@@ -5,7 +5,7 @@ Cypher is an advanced AI assistant based on Google's Gemini, designed to support
 ## Features
 
 - **Open Files and Websites**: Easily open files and websites by voice command.
-- **Set Alarms**: Set alarms to remind you of important tasks.
+- **Set Alarms and reminders**: Set alarms to remind you of important tasks.
 - **Weather Updates**: Get the current weather updates.
 - **Time and Date**: Ask for the current time and date.
 - **Store Data**: Store spoken data into a notepad.

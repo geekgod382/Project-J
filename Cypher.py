@@ -41,6 +41,14 @@ def alarm_thread(alarm_time):
     alarm_thread = threading.Thread(target=alarm, args=(alarm_time,))
     alarm_thread.start()
 
+def rem_thrd(task, reminder_time):
+    try:
+        remind_thread = threading.Thread(target=reminder, args=(task, reminder_time))
+        remind_thread.start()
+    except Exception as e:
+        print(e)
+        speak("Sorry, I couldn't set the reminder")
+
 # Set up Gemini API key
 api= 'YOUR API KEY'
 ai.configure(api_key=api)
@@ -133,6 +141,19 @@ def main():
             s=["stone", "paper", "scissor"]
             y=random.choice(s)
             stone_paper_scissor()
+
+        elif "set a reminder" in x:
+            print("What do you want me to remind you about?")
+            speak("What do you want me to remind you about?")
+            task = input()
+            print(f"Task to remind about: {task}")
+            print("When should I remind you? (HH:MM, 24 hour format)")
+            speak("When should I remind you?")
+            reminder_time = input()
+            print(f"Reminder time: {reminder_time}")
+
+            speak("Reminder set")
+            rem_thrd(task, reminder_time)
 
         elif "play" in x:
             song = x.replace('play', '')

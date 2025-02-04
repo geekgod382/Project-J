@@ -34,15 +34,16 @@ def get_audio():
         print(f"json decode error", {e})
 
 # preparing system to speak
-engine = pyttsx3.init()
-voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[1].id)
+
 def speak(text):
     
     '''This function speaks the text passed to it'''
-
+    engine = pyttsx3.init()
+    voices = engine.getProperty('voices')
+    engine.setProperty('voice', voices[1].id)
     engine.say(text)
     try:
         engine.runAndWait()
     except RuntimeError:
-        print("Runtime error occurred")
+        print("Runtime Error")
+

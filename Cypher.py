@@ -49,6 +49,16 @@ def rem_thrd(task, reminder_time):
         print(e)
         speak("Sorry, I couldn't set the reminder")
 
+def get_news():
+    api_key = 'your-news-api-key'
+    url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={api_key}'
+    response = requests.get(url)
+    news_data = response.json()
+    headlines = [article['title'] for article in news_data['articles'][:5]]
+    for i, headline in enumerate(headlines, 1):
+        print(f"{i}. {headline}")
+        speak(headline)
+
 # Set up Gemini API key
 api= 'YOUR API KEY'
 ai.configure(api_key=api)
@@ -177,6 +187,10 @@ def main():
             time.sleep(1)
             pyautogui.press('enter')
             speak("Message sent")
+
+        elif "tell me some news" in x or "what are the headlines" in x:
+            speak("Here are the top headlines")
+            get_news()
 
         else:
             r = tr.process_input(x)

@@ -45,9 +45,12 @@ Cypher is an advanced AI assistant based on Google's Gemini, designed to support
 
 - **API Key**: Set up your Gemini API key in the script:
     ```python
-    api = 'YOUR_API_KEY'
+    gem_api = 'your-gemini-api-key'
     ```
-
+- **API Key**: Set up your News API key in the script:
+    ```python
+    news_api_key = 'your-news-api-key'
+    ```
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.

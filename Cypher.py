@@ -60,7 +60,7 @@ def get_news():
         speak(headline)
 
 # Set up Gemini API key
-gem_api= 'your_gemini_api_key'
+gem_api= 'your-gemini-api-key'
 ai.configure(api_key=api)
 model = ai.GenerativeModel("gemini-pro")
 chat = model.start_chat()

@@ -128,9 +128,6 @@ def main():
             speak("Ok, Closing the system.")
             break
 
-        elif "close" in x:
-            pyautogui.hotkey('alt', 'fn', 'f4')
-
         elif "check a website for fraud" in x or "check website" in x:
             url = input('Enter the website URL to check: ')
             fraudulent = check_fraudulent(url)

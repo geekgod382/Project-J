@@ -50,7 +50,7 @@ def rem_thrd(task, reminder_time):
         speak("Sorry, I couldn't set the reminder")
 
 def get_news():
-    api_key = 'your-news-api-key'
+    news_api_key = 'your-news-api-key'
     url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={api_key}'
     response = requests.get(url)
     news_data = response.json()
@@ -60,7 +60,7 @@ def get_news():
         speak(headline)
 
 # Set up Gemini API key
-api= 'YOUR API KEY'
+gem_api= 'your_gemini_api_key'
 ai.configure(api_key=api)
 model = ai.GenerativeModel("gemini-pro")
 chat = model.start_chat()

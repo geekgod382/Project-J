@@ -9,14 +9,11 @@ Cypher is an advanced AI assistant based on Google's Gemini, designed to support
 - **Weather Updates**: Get the current weather updates.
 - **Time and Date**: Ask for the current time and date.
 - **Store Data**: Store spoken data into a notepad.
-- **Close System**: Close the system or applications.
 - **Fraud Detection**: Check if a website is fraudulent.
 - **Network Speed Test**: Check your internet speed.
 - **Play Stone Paper Scissor**: Play the classic game.
 - **Play Music**: Play songs on YouTube.
 - **Send WhatsApp Messages**: Send messages via WhatsApp.
-- **Summarize Text**: Summarize provided text using AI.
-- **Introduction and Capabilities**: Ask Cypher about its capabilities and creator.
 
 ## Installation
 

@@ -132,6 +132,25 @@ def main():
             y=random.choice(s)
             stone_paper_scissor()
 
+        elif "play" in x:
+            song = x.replace("play", "")
+            if "spotify" in x:
+                song = song.replace("on spotify", "")
+                pyautogui.hotkey("win")
+                time.sleep(0.5)
+                pyautogui.typewrite("spotify")
+                time.sleep(0.5)
+                pyautogui.press("enter")
+                time.sleep(8)
+                pyautogui.hotkey("ctrl", "k")
+                time.sleep(1)
+                pyautogui.typewrite(song)
+                time.sleep(2)
+                pyautogui.press("enter")
+            else:
+                speak("playing" + song)
+                pywhatkit.playonyt(song)
+
         elif "set a reminder" in x:
             print("What do you want me to remind you about?")
             speak("What do you want me to remind you about?")
@@ -181,5 +200,6 @@ if __name__ == '__main__':
     main()
 
 #code ends!
+
 
 

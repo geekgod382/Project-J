@@ -32,11 +32,6 @@ def alarm(alarm_time):
             time.sleep(1)
         speak("Sir, Time's up!!")
 
-def save_to_notepad(text):
-    pyautogui.typewrite(text)
-    pyautogui.hotkey('ctrl', 's')
-    time.sleep(5)
-
 def alarm_thread(alarm_time): 
     alarm_thread = threading.Thread(target=alarm, args=(alarm_time,))
     alarm_thread.start()
@@ -111,18 +106,6 @@ def main():
             alarm_time = input("(HH:MM, in 24 hour format) ")
             alarm_thread(alarm_time)
 
-        elif "store some data" in x or "store" in x:
-            rw=r'Stored_data.txt'
-            
-            pyautogui.hotkey('win', 'r')
-            pyautogui.typewrite(rw)
-            pyautogui.press('enter')
-            time.sleep(4)
-            speak("Speak now")
-            pyautogui.press('enter')
-            text = get_audio()
-            save_to_notepad(text)
-
         elif "close the system" in x or "close system" in x:
             print("Ok, Closing the system.")
             speak("Ok, Closing the system.")
@@ -167,24 +150,6 @@ def main():
             speak("playing" + song)
             pywhatkit.playonyt(song)
 
-        elif "send a whatsapp message" in x or "send message" in x or "send whatsapp message" in x:
-            x=str(input("Enter the name of the person: "))
-            pyautogui.hotkey('win')
-            pyautogui.typewrite('whatsapp')
-            pyautogui.press('enter')
-            time.sleep(3)
-            pyautogui.typewrite(x)
-            time.sleep(1)
-            pyautogui.press('down')
-            time.sleep(1)
-            pyautogui.press('enter')
-            speak("What do you want to send?")
-            msg = get_audio()
-            pyautogui.typewrite(msg)
-            time.sleep(1)
-            pyautogui.press('enter')
-            speak("Message sent")
-
         elif "tell me some news" in x or "what are the headlines" in x:
             speak("Here are the top headlines")
             get_news()
@@ -216,4 +181,5 @@ if __name__ == '__main__':
     main()
 
 #code ends!
+
 

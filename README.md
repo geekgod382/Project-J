@@ -1,6 +1,6 @@
 # Cypher - An AI Assistant
 
-Cypher is an advanced AI assistant based on Google's Gemini, designed to support you with a wide range of tasks. This project leverages various Python libraries to provide functionalities such as opening applications, setting alarms, checking network speed, and more.
+Cypher is an AI assistant based on Google's Gemini, designed to support you with a wide range of tasks. This project leverages various Python libraries to provide functionalities such as opening applications, setting alarms, and more.
 
 ## Features
 
